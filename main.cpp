@@ -45,54 +45,46 @@ int main(){
 
     exit = false;
     while (!exit){
+        std::cout << "\n-----------------------------------\n";
         std::cout << "Выберите действие:\n";
         std::cout << "1 - показать информацию\n";
         std::cout << "2 - добавить клиента\n";
         std::cout << "3 - удалить клиента\n";
         std::cout << "4 - изменить информацию о клиенте\n";
-        std::cout << "5 - отсортировать клиннтов по возрастанию скидки\n";
-        std::cout << "6 - вывести клиентов со скидкой 5%\n";
-        std::cout << "7 - выйти\n";
+        std::cout << "5 - найти клиента\n";
+        std::cout << "6 - отсортировать клиентов по возрастанию скидки\n";
+        std::cout << "7 - вывести клиентов со скидкой 5%(при этом клиенты будут отсортированы по возрастанию скидки)\n";
+        std::cout << "8 - выйти\n";
         int input;
         std::cin >> input;
-        int number;
         switch (input){
         case 1:
-            if (size == 0){
-                std::cout << "Нет клиентов!\n";
-                break;
-            }
-            std::cout << "Ввдите номер клиента (0 - показать всех клиентов): ";
-            std::cin >> number;
-            if (number == 0){
-                for (int i = 0; i < size;i++){
-                    std::cout << i + 1 << " клиент\n";
-                    OutputClient(client[i]);
-                    std::cout << '\n';
-                }
-                std::cout << size << '\n';
-            }
-            else {
-                std::cout << number << " клиент\n";
-                OutputClient(client[number - 1]);
-                std::cout << '\n';
-            }
+            ShowInformation(client, size);
             break;
         case 2:
             client = AddClient(client, &size, special_street, special_discount);
             break;
         case 3:
-            if (size == 0){
-                std::cout << "Нет клиентов!\n";
-                break;
-            }
             client = ChooseForDelete(client, &size);
             break;
+        case 4:
+            client = ChooseForChange(client, size);
+        case 5:
+            ChooseForFind(client, size);
+            break;
+        case 6:
+            Sort(client, size);
+            break;
         case 7:
+            FindDiscount(client, size);
+            break;
+        case 8:
             exit = true;
             break;
         default:
             std::cout << "Неверный номер!\n";
         }
     }
+
+    delete[] client;
 }
