@@ -190,7 +190,6 @@ CMakeFiles/main.dir/Functions.cpp.o: Functions.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/main.dir/main.cpp.o: main.cpp \
-  Functions.cpp \
   Functions.h \
   Struct.h \
   /usr/include/alloca.h \

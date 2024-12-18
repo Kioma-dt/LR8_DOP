@@ -7,7 +7,7 @@ int main(){
     Client *client;
     int size = 0;
     std::string special_street;
-    // int special_disrict;
+    int special_disrict;
     int special_discount = -1;
 
     while (!exit){
@@ -22,20 +22,22 @@ int main(){
         case 1:
             std::cout << "Введите количество клинтов: ";
             size = CheckUnsigned();
-            client = EnterWithSize(size, special_street, special_discount);
+            client = EnterWithSize(size, special_street, special_disrict, special_discount);
             exit = true;
             break;
         case 2:
-            client = EnterWithStop(&size, special_street, special_discount);
+            client = EnterWithStop(&size, special_street, special_disrict, special_discount);
             exit = true;
             break;
         case 3:
-            client = EnterWithDialog(&size, special_street, special_discount);
+            client = EnterWithDialog(&size, special_street, special_disrict, special_discount);
             exit = true;
             break;
         case 4:
             std::cout << "Введите специальную улицу: ";
             std::cin >> special_street;
+            std::cout << "Введите специальный микрорайон: ";
+            special_disrict = CheckUnsigned();
             std::cout << "Введите специальную скидку: ";
             special_discount = CheckDiscount();
             break;
@@ -63,7 +65,7 @@ int main(){
             ShowInformation(client, size);
             break;
         case 2:
-            client = AddClient(client, &size, special_street, special_discount);
+            client = AddClient(client, &size, special_street, special_disrict, special_discount);
             break;
         case 3:
             client = ChooseForDelete(client, &size);
@@ -88,5 +90,5 @@ int main(){
         }
     }
 
-    delete[] client;
+    free(client);
 }

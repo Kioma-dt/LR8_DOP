@@ -33,5 +33,6 @@ if (SANITIZE_FLAGS)
     add_link_options(${SANITIZE_LINK_FLAGS})
 endif()
 
+
 add_executable(main main.cpp Functions.cpp Functions.h Struct.h)
 

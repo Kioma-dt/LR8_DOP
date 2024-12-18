@@ -11,7 +11,7 @@ typedef struct Client{
     std::string first_name;
     std::string patronymic;
     bool hasStreet;
-    std::string street;
+    addr address;
     int house;
     int flat;
     int discount;

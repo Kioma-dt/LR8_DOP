@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/main.cpp.o: \
- /home/roma/Documents/453503/ОАиП/LR8/main.cpp \
+ /home/roma/Documents/453503/ОАиП/LR8/Task_1/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -150,5 +150,6 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/roma/Documents/453503/ОАиП/LR8/Functions.h \
- /home/roma/Documents/453503/ОАиП/LR8/Struct.h
+ /home/roma/Documents/453503/ОАиП/LR8/Task_1/Functions.h \
+ /home/roma/Documents/453503/ОАиП/LR8/Task_1/Struct.h \
+ /home/roma/Documents/453503/ОАиП/LR8/Task_1/Functions.cpp

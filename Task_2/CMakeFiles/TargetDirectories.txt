@@ -1,0 +1,3 @@
+/home/roma/Documents/453503/ОАиП/LR8/Task_2/CMakeFiles/main.dir
+/home/roma/Documents/453503/ОАиП/LR8/Task_2/CMakeFiles/edit_cache.dir
+/home/roma/Documents/453503/ОАиП/LR8/Task_2/CMakeFiles/rebuild_cache.dir
